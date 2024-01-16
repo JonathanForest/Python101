@@ -10,7 +10,7 @@
 
 ### Python's Logic and Structure
 
-- What are keywords: [Keywords][https://realpython.com/python-keywords/]
+- What are keywords: [Keywords](https://realpython.com/python-keywords/)
 - What are instructions? 
 - What is indentation?
 - What are comments?
