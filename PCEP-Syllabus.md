@@ -10,7 +10,7 @@
 
 ### Python's Logic and Structure
 
-- What are keywords: [Keywords](https://realpython.com/python-keywords/)
+- What are keywords: [Keywords on RealPython.com](https://realpython.com/python-keywords/)
 - What are instructions? 
 - What is indentation?
 - What are comments?
@@ -27,14 +27,14 @@
 
 ### Operators
 
-- numeric operators: ** * / % // + – [https://realpython.com/python-operators-expressions/#arithmetic-operators-and-expressions-in-python]
-- string operators: * + [https://realpython.com/python-operators-expressions/#concatenation-and-repetition-operators-and-expressions]
-- assignment operators [https://realpython.com/python-operators-expressions/#the-assignment-operator-and-statements]
-- shortcut operators [https://realpython.com/python-operators-expressions/#augmented-assignment-operators-and-expressions]
-- unary and binary operators [https://realpython.com/python-operators-expressions/#getting-started-with-operators-and-expressions]
+- numeric operators: ** * / % // + – [Operators on RealPython.com](https://realpython.com/python-operators-expressions/#arithmetic-operators-and-expressions-in-python)
+- string operators: * + [String Operators on RealPython.com](https://realpython.com/python-operators-expressions/#concatenation-and-repetition-operators-and-expressions)
+- assignment operators [Assignment on ReaPython.com](https://realpython.com/python-operators-expressions/#the-assignment-operator-and-statements)
+- shortcut operators [Shortcut Operators on RealPython.com](https://realpython.com/python-operators-expressions/#augmented-assignment-operators-and-expressions)
+- unary and binary operators [Unary and Binary Operators on RealPython.com](https://realpython.com/python-operators-expressions/#getting-started-with-operators-and-expressions)
 - priorities and binding
-- bitwise operators: ~ & ^ | << >> [https://realpython.com/python-operators-expressions/#bitwise-operators-and-expressions-in-python]
-- Boolean operators and expressions: [https://realpython.com/python-operators-expressions/#boolean-operators-and-expressions-in-python]
-- relational operators ( == != > >= < <= ) [https://realpython.com/python-operators-expressions/#comparison-operators-and-expressions-in-python]
+- bitwise operators: ~ & ^ | << >> [Bitwise Operators on RealPython.com](https://realpython.com/python-operators-expressions/#bitwise-operators-and-expressions-in-python)
+- Boolean operators and expressions: [Boolean Operators on RealPython.com](https://realpython.com/python-operators-expressions/#boolean-operators-and-expressions-in-python)
+- relational operators ( == != > >= < <= ) [Relational Operators on RealPython.com](https://realpython.com/python-operators-expressions/#comparison-operators-and-expressions-in-python)
 - the accuracy of floating-point numbers
 - type casting
