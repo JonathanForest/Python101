@@ -63,10 +63,49 @@
 - While [While Loops on RealPython](https://realpython.com/python-while-loop/)
 - Range() [Range Function on RealPython](https://realpython.com/python-for-loop/#the-range-function)
 - Iterating through sequences [Iterating through Stuff on RealPython](https://realpython.com/python-for-loop/#collection-based-or-iterator-based-loop)
-- Expanding loops with while-else and for-else [](https://realpython.com/python-while-loop/#the-else-clause)
+- Expanding loops with while-else and for-else [While-Else on RealPython](https://realpython.com/python-while-loop/#the-else-clause)
 - Nesting loops and conditional statements
 - Controlling loop execution with break and continue [Loop Behaviour on RealPython](https://realpython.com/python-for-loop/#altering-for-loop-behavior)
 - The pass instruction [Doing Nothing on RealPython](https://realpython.com/python-pass/)
 
 
+## Section 3
 
+### Lists
+
+- constructing vectors [Building Lists on RealPython](https://realpython.com/python-lists-tuples/#python-lists)
+- indexing and slicing [Getting List Items On RealPython](https://realpython.com/python-lists-tuples/#python-lists)        
+- the len() function
+- Modifying a List [Modifying a List on RealPython](https://realpython.com/python-lists-tuples/#methods-that-modify-a-list)
+- functions: len(), sorted()
+- the del instruction
+- iterating through lists with the for loop
+- initializing loops
+- the in and not in operators
+- list comprehensions [List Comprehension on RealPython](https://realpython.com/list-comprehension-python/#using-list-comprehensions)
+- copying and cloning
+- lists in lists: matrices and cubes
+
+
+### Tuples
+- Tuples [What are Tuples? on RealPython](https://realpython.com/python-lists-tuples/#python-tuples)
+- tuples: indexing, slicing, building, immutability [Using Tuples on RealPython](https://realpython.com/python-lists-tuples/#defining-and-using-tuples)
+- tuples vs. lists: similarities and differences
+- lists inside tuples and tuples inside lists
+
+### Dictionaries
+- dictionaries: building, indexing, adding and removing keys
+- iterating through dictionaries and their keys and values
+- checking the existence of keys
+- methods: keys(), items(), and values()
+
+### Thinking of strings as lists of characters
+- constructing strings
+- indexing, slicing, immutability
+- escaping using the \ character
+- quotes and apostrophes inside strings
+- multi-line strings
+- basic string functions and methods
+
+
+## Section 4
