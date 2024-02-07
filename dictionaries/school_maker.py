@@ -1,15 +1,39 @@
+"""
+School Maker!
 
+The idea here, is that students learn how to use dictionaries in Python by looking through a
+'simplified' representation of a school in which there are hidden 'pigeons'. Once they've found
+the pigeons, they've won.
+
+
+"""
+
+# We need to use UserX to create dict-like objects that we then
+# modify to make things a little more difficult for the students.
 from collections import UserDict, UserList, OrderedDict
+
+# To create some degree of variation, we use random functions
+# so that the same 'school' isn't created every time.
 from random import random, randint, choice
+
+# In order to transport the school to students computers without
+# them being able to open it in a text editor, we pickle it instead.
 import pickle
 
-
+# We use fake to generate the random names, etc.
 import faker
+
+# Just to add that little bit of realism, we add some fake school data
+# to the top level in the school dict.
 from faker_education import SchoolProvider
 
+
+# This will count how many pigeons we find when using our search
+# function, essentially making sure there are pigeons in the data.
 PIGEON_COUNT = 0
 
-
+# Here we initialise the faker class. I want there to me 3 spanish
+# results for every 1 english result.
 FAKE = faker.Faker(
     OrderedDict([
         ("es_ES", 3),
@@ -24,6 +48,12 @@ school_fake.add_provider(SchoolProvider)
 
 
 class Pigeon:
+    """
+    Pigeon
+
+    Simple representation of a pigeon.
+
+    """
     def __init__(self):
         self.caught = False
         self.name = FAKE.first_name()
@@ -32,26 +62,12 @@ class Pigeon:
         return "Pigeon!"
 
     def catch(self):
-        self.caught = True
+        if not self.caught:
+            self.caught = True if random() > 0.5 else False
 
 
 def create_pigeon():
     return Pigeon()
-
-
-
-def traverse_dict(d, func=None):
-    path = ""
-    for k, v in d.items():
-        if isinstance(v, dict):
-            if pigeon := next(func):
-                d[k]['pigeon'] = pigeon
-                print(d[k])
-                print("---------")
-        elif isinstance(v, list):
-            for i in v:
-                traverse_dict(i, func=func)
-    return d
 
 
 def search_pigeons(data, path=[]):
@@ -93,6 +109,16 @@ def str_only_repr(v):
 
 
 class MyDict(UserDict):
+
+    def __init__(self, data):
+        global PIGEON_COUNT
+
+        if random() > 0.9995:
+            data['pigeon'] = create_pigeon()
+            print("Pigeon Added")
+            PIGEON_COUNT += 1
+        UserDict.__init__(self, data)
+
     def __repr__(self):
         # return repr(set(self.data.keys()))
         return repr({k: str_only_repr(v) for k, v in self.data.items()})
@@ -127,14 +153,14 @@ def create_tv():
 
 def create_book():
     return MyDict({
-        "isbn": FAKE.isbn10()
+        "isbn": FAKE.isbn10(),
     })
 
 
 def create_shelf(x):
     return MyDict({
         "books": [
-            create_book() for x in range(randint(12,30))
+            create_book() for x in range(randint(1,5))
         ],
         "shelf_number": x,
         "creaky": False if random() > 0.4 else True
@@ -257,25 +283,20 @@ def create_westside():
 
     return s
 
-x = create_westside()
+
+if __name__ == "__main__":
+    x = create_westside()
+
+    search_pigeons(x)
+
+    print(PIGEON_COUNT)
 
 
-#print(x)
+    with open("school.pickle", "wb") as f:
+        pickle.dump(x, f)
 
-pigd_gen = add_pigeons()
-
-x = traverse_dict(x, func=pigd_gen)
-
-
-print(PIGEON_COUNT)
-
-search_pigeons(x)
-
-with open("school.pickle", "wb") as f:
-    pickle.dump(x, f)
-
-with open("pigeons.txt", "w") as f:
-    f.write(str(x))
+    with open("pigeons.txt", "w") as f:
+        f.write(str(x))
 
 
 
